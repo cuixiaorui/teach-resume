@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Counter from '../components/Counter.astro';
+import { Counter } from "../components/Counter";
+
+const count = 1;
+const users = ["cxr", "xiaohong"];
+---
+
+<Layout title="Welcome to Astro.">
+  {count}
+  <div>
+    <ul>
+      {
+        users.map((name) => {
+          return <li>{name}</li>;
+        })
+      }
+    </ul>
+    <Counter count={10} client:load/>
+  </div>
+</Layout>
+
+<style></style>

@@ -1,0 +1,17 @@
+---
+export interface Props {
+  count: number;
+}
+
+const { count } = Astro.props;
+
+function handleClick() {
+  console.log("log");
+}
+---
+
+<div>
+  counter {count}
+
+  <button onClick={handleClick}>click</button>
+</div>
